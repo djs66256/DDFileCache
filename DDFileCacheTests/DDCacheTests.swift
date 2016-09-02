@@ -1,26 +1,23 @@
 //
-//  DDFileCacheTests.swift
-//  DDFileCacheTests
+//  DDCacheTests.swift
+//  DDFileCache
 //
 //  Created by daniel on 16/9/2.
 //  Copyright © 2016年 Daniel. All rights reserved.
 //
 
 import XCTest
+
 @testable import DDFileCache
 
-class DDFileCacheTests: XCTestCase {
+class DDCacheTests: XCTestCase {
     
-    private var cache : DDFileCache<AnyObject, NSString>?
+    private var cache : DDCache?
     
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        let path = NSSearchPathForDirectoriesInDomains(.CachesDirectory, .UserDomainMask, true).first
-        let config = DDFileCacheConfig(path: path!, name: "test")
-        config.checkExpireInterval = 0;
-        self.cache = DDFileCache(config: config)
+        self.cache = DDCache(name: "test")
     }
     
     override func tearDown() {
@@ -65,4 +62,5 @@ class DDFileCacheTests: XCTestCase {
         let str3 = self.cache?.objectForKey(key) as? String
         XCTAssert(str3 == str2)
     }
+    
 }

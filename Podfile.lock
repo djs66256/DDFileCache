@@ -1,0 +1,10 @@
+PODS:
+  - leveldb-library (1.18.2)
+
+DEPENDENCIES:
+  - leveldb-library
+
+SPEC CHECKSUMS:
+  leveldb-library: ef0453697c0fda3a9e550e5650e52976e6724548
+
+COCOAPODS: 0.39.0
