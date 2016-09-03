@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "DDFileCache"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "FileCache"
 
   s.description  = <<-DESC
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
 
-  s.source       = { :git => "https://github.com/djs66256/DDFileCache.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/djs66256/DDFileCache.git", :tag => "0.0.2" }
 
   s.source_files  = "Class/*.{swift}", "Class/**/*.{swift}"
   s.exclude_files = "Classes/Exclude"
