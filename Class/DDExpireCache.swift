@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol DDExpireCache: NSObjectProtocol {
+public protocol DDExpireCache: NSObjectProtocol {
     associatedtype ObjectType
     associatedtype KeyType
     func objectForKey(key: KeyType) -> ObjectType?

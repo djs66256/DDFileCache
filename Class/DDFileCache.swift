@@ -9,27 +9,27 @@
 import UIKit
 import DDLevelDB
 
-@objc class DDFileCacheConfig: NSObject {
-    let path: String
-    let name: String
+public class DDFileCacheConfig: NSObject {
+    public let path: String
+    public let name: String
     
-    var checkExpireInterval: NSTimeInterval = 3600   // a hour
+    public var checkExpireInterval: NSTimeInterval = 3600   // a hour
     
-    var createIfMissing = true
-    var createIntermediateDirectories = true
-    var errorIfExists = false
-    var paranoidCheck = false
-    var compression  = true
-    var filterPolicy: Int32 = 0
-    var cacheSize: size_t = 0
+    public var createIfMissing = true
+    public var createIntermediateDirectories = true
+    public var errorIfExists = false
+    public var paranoidCheck = false
+    public var compression  = true
+    public var filterPolicy: Int32 = 0
+    public var cacheSize: size_t = 0
     
-    init(path: String, name: String) {
+    public init(path: String, name: String) {
         self.path = path
         self.name = name
     }
 }
 
-class DDFileCache<ObjectType: AnyObject, KeyType: AnyObject>: NSObject, DDExpireCache {
+public class DDFileCache<ObjectType: AnyObject, KeyType: AnyObject>: NSObject, DDExpireCache {
 
     private let config: DDFileCacheConfig
     private let db: LevelDB
@@ -37,7 +37,7 @@ class DDFileCache<ObjectType: AnyObject, KeyType: AnyObject>: NSObject, DDExpire
     private let expireCheckKey = "__expire_check_key"
     private var removingExpireData = false
     
-    convenience init(name: String) {
+    convenience public init(name: String) {
         let path = NSSearchPathForDirectoriesInDomains(.CachesDirectory, .UserDomainMask, true).first
         if let path = path {
             self.init(path: "\(path)/DDFileCache", name: name)
@@ -47,12 +47,12 @@ class DDFileCache<ObjectType: AnyObject, KeyType: AnyObject>: NSObject, DDExpire
         }
     }
     
-    convenience init(path: String, name: String) {
+    convenience public init(path: String, name: String) {
         let config = DDFileCacheConfig(path: path, name: name);
         self.init(config: config)
     }
     
-    init(config: DDFileCacheConfig) {
+    public init(config: DDFileCacheConfig) {
         self.config = config
         
         var dbOptions = LevelDBOptions()
@@ -67,7 +67,7 @@ class DDFileCache<ObjectType: AnyObject, KeyType: AnyObject>: NSObject, DDExpire
         db = LevelDB(path: config.path, name: config.name, andOptions: dbOptions)
     }
     
-    func setObject(obj: ObjectType?, forKey key: KeyType, timeInterval: NSTimeInterval) {
+    public func setObject(obj: ObjectType?, forKey key: KeyType, timeInterval: NSTimeInterval) {
         if let obj = obj {
             checkExpireObjects()
             
@@ -81,7 +81,7 @@ class DDFileCache<ObjectType: AnyObject, KeyType: AnyObject>: NSObject, DDExpire
         }
     }
     
-    func objectForKey(key: KeyType) -> ObjectType? {
+    public func objectForKey(key: KeyType) -> ObjectType? {
         checkExpireObjects()
         
         let infoKey = infoKeyFromOriginKey(key)
@@ -96,7 +96,7 @@ class DDFileCache<ObjectType: AnyObject, KeyType: AnyObject>: NSObject, DDExpire
         return nil;
     }
     
-    func removeObjectForKey(key: KeyType) {
+    public func removeObjectForKey(key: KeyType) {
         let infoKey = infoKeyFromOriginKey(key)
         let batch = db.newWritebatch()
         batch.removeObjectForKey(key)
@@ -106,11 +106,11 @@ class DDFileCache<ObjectType: AnyObject, KeyType: AnyObject>: NSObject, DDExpire
         checkExpireObjects()
     }
     
-    func removeAllObjects() {
+    public func removeAllObjects() {
         db.removeAllObjects()
     }
     
-    func deleteDatabaseFromDisk() {
+    public func deleteDatabaseFromDisk() {
         db.deleteDatabaseFromDisk()
     }
     

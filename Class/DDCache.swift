@@ -8,24 +8,24 @@
 
 import UIKit
 
-class DDCache: NSObject, DDExpireCache {
-    typealias ObjectType = AnyObject
-    typealias KeyType = String
+public class DDCache: NSObject, DDExpireCache {
+    public typealias ObjectType = AnyObject
+    public typealias KeyType = String
     private let memCache: NSCache
     private let fileCache: DDFileCache<ObjectType, NSString>
     
-    convenience init(name: String) {
+    convenience public init(name: String) {
         let path = NSSearchPathForDirectoriesInDomains(.CachesDirectory, .UserDomainMask, true).first ?? "/" as NSString
         self.init(path: path.stringByAppendingPathComponent("DDCache"), name: name)
     }
     
-    init(path: String, name: String) {
+    public init(path: String, name: String) {
         memCache = NSCache()
         memCache.countLimit = 20
         fileCache = DDFileCache<ObjectType, NSString>(path: path, name: name)
     }
     
-    func setObject(obj: ObjectType?, forKey key: KeyType, timeInterval: NSTimeInterval) {
+    public func setObject(obj: ObjectType?, forKey key: KeyType, timeInterval: NSTimeInterval) {
         if let obj = obj {
             fileCache.setObject(obj, forKey: key, timeInterval: timeInterval)
             let expireTime = NSDate(timeIntervalSinceNow: timeInterval)
@@ -36,7 +36,7 @@ class DDCache: NSObject, DDExpireCache {
         }
     }
     
-    func objectForKey(key: KeyType) -> ObjectType? {
+    public func objectForKey(key: KeyType) -> ObjectType? {
         if let info = memCache.objectForKey(key) as? DDMemCacheInfo {
             if info.expire.timeIntervalSinceNow > 0 {
                 return info.data
@@ -51,17 +51,17 @@ class DDCache: NSObject, DDExpireCache {
         }
     }
     
-    func removeObjectForKey(key: KeyType) {
+    public func removeObjectForKey(key: KeyType) {
         memCache.removeObjectForKey(key)
         fileCache.removeObjectForKey(key)
     }
     
-    func removeAllObjects() {
+    public func removeAllObjects() {
         memCache.removeAllObjects()
         fileCache.removeAllObjects()
     }
     
-    func deleteDatabaseFromDisk() {
+    public func deleteDatabaseFromDisk() {
         fileCache.deleteDatabaseFromDisk()
         memCache.removeAllObjects()
     }
