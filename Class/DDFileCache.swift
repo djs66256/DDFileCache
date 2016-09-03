@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DDLevelDB
 
 @objc class DDFileCacheConfig: NSObject {
     let path: String

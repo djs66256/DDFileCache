@@ -16,12 +16,8 @@
 		65C999B21D795FD80019780A /* DDFileCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C999B11D795FD80019780A /* DDFileCache.swift */; };
 		65C999B41D7960120019780A /* DDExpireCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C999B31D7960120019780A /* DDExpireCache.swift */; };
 		65C999B61D7968800019780A /* DDCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C999B51D7968800019780A /* DDCache.swift */; };
-		65C999BD1D79936E0019780A /* DDLevelDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C999BC1D79936E0019780A /* DDLevelDB.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		65C999C61D79B6E30019780A /* LDBSnapshot.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65C999C11D79B6E30019780A /* LDBSnapshot.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		65C999C71D79B6E30019780A /* LDBWriteBatch.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65C999C31D79B6E30019780A /* LDBWriteBatch.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		65C999C81D79B6E30019780A /* LevelDB.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65C999C51D79B6E30019780A /* LevelDB.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		65C999CA1D79BAFD0019780A /* DDCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C999C91D79BAFD0019780A /* DDCacheTests.swift */; };
-		F514A0276CB4D57633525ACC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A44AF6DD854DF299740CB7DA /* libPods.a */; };
+		9A631FE2343FB7E96DC2B71B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0A61BF5EB8B597566F2147 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,19 +45,9 @@
 		65C999B11D795FD80019780A /* DDFileCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDFileCache.swift; sourceTree = "<group>"; };
 		65C999B31D7960120019780A /* DDExpireCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDExpireCache.swift; sourceTree = "<group>"; };
 		65C999B51D7968800019780A /* DDCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDCache.swift; sourceTree = "<group>"; };
-		65C999B71D7969900019780A /* DDFileCache-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DDFileCache-Bridging-Header.h"; sourceTree = "<group>"; };
-		65C999BB1D79936E0019780A /* DDLevelDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLevelDB.h; sourceTree = "<group>"; };
-		65C999BC1D79936E0019780A /* DDLevelDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLevelDB.m; sourceTree = "<group>"; };
-		65C999BF1D79B6E30019780A /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
-		65C999C01D79B6E30019780A /* LDBSnapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDBSnapshot.h; sourceTree = "<group>"; };
-		65C999C11D79B6E30019780A /* LDBSnapshot.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LDBSnapshot.mm; sourceTree = "<group>"; };
-		65C999C21D79B6E30019780A /* LDBWriteBatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDBWriteBatch.h; sourceTree = "<group>"; };
-		65C999C31D79B6E30019780A /* LDBWriteBatch.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LDBWriteBatch.mm; sourceTree = "<group>"; };
-		65C999C41D79B6E30019780A /* LevelDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelDB.h; sourceTree = "<group>"; };
-		65C999C51D79B6E30019780A /* LevelDB.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LevelDB.mm; sourceTree = "<group>"; };
 		65C999C91D79BAFD0019780A /* DDCacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDCacheTests.swift; sourceTree = "<group>"; };
+		7E0A61BF5EB8B597566F2147 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33D59FFDF69805077644AF1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		A44AF6DD854DF299740CB7DA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F514A0276CB4D57633525ACC /* libPods.a in Frameworks */,
+				9A631FE2343FB7E96DC2B71B /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +72,7 @@
 		1953903443494915CC70C637 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A44AF6DD854DF299740CB7DA /* libPods.a */,
+				7E0A61BF5EB8B597566F2147 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -147,29 +133,11 @@
 		65C999B01D795F760019780A /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				65C999BE1D79B6E30019780A /* Vendor */,
 				65C999B31D7960120019780A /* DDExpireCache.swift */,
 				65C999B11D795FD80019780A /* DDFileCache.swift */,
 				65C999B51D7968800019780A /* DDCache.swift */,
-				65C999B71D7969900019780A /* DDFileCache-Bridging-Header.h */,
-				65C999BB1D79936E0019780A /* DDLevelDB.h */,
-				65C999BC1D79936E0019780A /* DDLevelDB.m */,
 			);
 			path = Class;
-			sourceTree = "<group>";
-		};
-		65C999BE1D79B6E30019780A /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-				65C999BF1D79B6E30019780A /* Common.h */,
-				65C999C01D79B6E30019780A /* LDBSnapshot.h */,
-				65C999C11D79B6E30019780A /* LDBSnapshot.mm */,
-				65C999C21D79B6E30019780A /* LDBWriteBatch.h */,
-				65C999C31D79B6E30019780A /* LDBWriteBatch.mm */,
-				65C999C41D79B6E30019780A /* LevelDB.h */,
-				65C999C51D79B6E30019780A /* LevelDB.mm */,
-			);
-			path = Vendor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,13 +296,9 @@
 			files = (
 				65C999B61D7968800019780A /* DDCache.swift in Sources */,
 				65C999B21D795FD80019780A /* DDFileCache.swift in Sources */,
-				65C999C81D79B6E30019780A /* LevelDB.mm in Sources */,
 				65C999931D795D520019780A /* ViewController.swift in Sources */,
-				65C999C61D79B6E30019780A /* LDBSnapshot.mm in Sources */,
 				65C999911D795D520019780A /* AppDelegate.swift in Sources */,
-				65C999BD1D79936E0019780A /* DDLevelDB.m in Sources */,
 				65C999B41D7960120019780A /* DDExpireCache.swift in Sources */,
-				65C999C71D79B6E30019780A /* LDBWriteBatch.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,7 +434,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.djs66256.DDFileCache;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Class/DDFileCache-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "DDFileCache-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -485,7 +449,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.djs66256.DDFileCache;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Class/DDFileCache-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "DDFileCache-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -498,7 +462,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.djs66256.DDFileCacheTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Class/DDFileCache-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "DDFileCache-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DDFileCache.app/DDFileCache";
 			};
 			name = Debug;
@@ -512,7 +476,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.djs66256.DDFileCacheTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Class/DDFileCache-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "DDFileCache-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DDFileCache.app/DDFileCache";
 			};
 			name = Release;
